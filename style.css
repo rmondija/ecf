@@ -16,7 +16,7 @@ nav .espace {
     align-items: center;
     justify-content: center;
     margin-right: 20px;
-    padding-bottom: 10px;
+
 }
 
 .icon_header {
@@ -35,12 +35,6 @@ nav .espace {
     text-decoration: none;
     justify-content: space-between;
     margin: 0 10px;
-}
-
-.bouton {
-    display: flex;
-    margin-top: 20px;
-    justify-content: right;
 }
 
 .image-haut {
@@ -90,6 +84,7 @@ nav .espace {
     height: 90%;
     width: 90%;
     box-shadow: 0px 0px 5px grey;
+    margin: 45px;
 }
 
 .container {
@@ -237,9 +232,15 @@ tr, td {
     font-size: 20px;
 }
 
+.text-centre {
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
 .titre2 {
+    text-align: left;
     margin: 20px;
-    text-align: center;
+    padding-top: 20px;
 }
 
 .mission-test {
@@ -250,10 +251,12 @@ tr, td {
 }
 
 .test-general {
+    margin: 100px;
     align-items: center;
     justify-content: center;
     width: 1129px;
-    height: 237px;
+    height: 200px;
+    border-radius: 8px;
     background-color: white;
 }
 
@@ -263,24 +266,33 @@ tr, td {
     border-radius: 8px;
     align-items: center;
     justify-content: space-between;
+    margin: 10px;
 }
 
 .left-div {
     margin: 20px;
     width: 500px;
-    height: 50px;
+    height: 30px;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
+.left-div:hover {
+    background-color: #EDFEF6;
+}
+
 .right-div {
     margin: 20px;
     width: 500px;
-    height: 77px;
+    height: 30px;
     display: flex;
     justify-content: left;
     align-items: center;
+}
+
+.right-div:hover {
+    background-color: #EDFEF6;
 }
 
 .impact {
@@ -292,7 +304,7 @@ tr, td {
 }
 
 .temoignage {
-    margin: 20px;
+    margin: 30px;
     border-radius: 8px;
     text-align: left;
     justify-content: space-between;
@@ -326,9 +338,22 @@ footer {
 
 .text-pied {
     margin: 20px;
-    width: 20%;
 }
 
 .contact {
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.email img {
+    max-width: 100%;
+    height: auto;
+}
+
+.figcaption {
+    margin-left: 10px;
 }
