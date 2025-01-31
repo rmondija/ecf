@@ -37,6 +37,10 @@ nav .espace {
     margin: 0 10px;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .image-haut {
     height: auto;
     width: 100%;
@@ -54,12 +58,11 @@ nav .espace {
 
 .text-over {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; /* Couleur du texte */
-    font-size: 55px; /* Taille de la police */
-    padding: 10px;
+    font-size: 50px; /* Taille de la police */
     border-radius: 5px;
 }
 
@@ -69,8 +72,7 @@ nav .espace {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; /* Couleur du texte */
-    font-size: 24px; /* Taille de la police */
-    padding: 10px;
+    font-size: 24px; /* Taille de la police */  
     border-radius: 5px;
 }
 
@@ -92,7 +94,7 @@ nav .espace {
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .euro {
@@ -152,7 +154,7 @@ nav .espace {
     width: 628px;
     height: 446px;
     text-align: center;
-    margin-left: 40px;
+    margin-left: 10px;
     margin-top: 5%;
     border-radius: 8px 0px 0px 8px;
 }
@@ -164,7 +166,7 @@ nav .espace {
 .notre-mission {
     background-color: white;
     color: #717781;
-    width: 608px;
+    width: 520px;
     height: 446px;
     overflow: hidden;
     margin-top: 5%;
@@ -238,7 +240,7 @@ tr, td {
 }
 
 .titre2 {
-    text-align: left;
+    text-align: center;
     margin: 20px;
     padding-top: 20px;
 }
@@ -251,7 +253,7 @@ tr, td {
 }
 
 .test-general {
-    margin: 100px;
+    margin: 30px;
     align-items: center;
     justify-content: center;
     width: 1129px;
@@ -266,7 +268,7 @@ tr, td {
     border-radius: 8px;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
+    margin: 10px;    
 }
 
 .left-div {
@@ -279,7 +281,7 @@ tr, td {
 }
 
 .left-div:hover {
-    background-color: #EDFEF6;
+    background-color: #11B881;
 }
 
 .right-div {
@@ -292,7 +294,7 @@ tr, td {
 }
 
 .right-div:hover {
-    background-color: #EDFEF6;
+    background-color: #11B881;
 }
 
 .impact {
@@ -304,7 +306,7 @@ tr, td {
 }
 
 .temoignage {
-    margin: 30px;
+    margin: 20px;
     border-radius: 8px;
     text-align: left;
     justify-content: space-between;
@@ -312,12 +314,12 @@ tr, td {
 }
 
 .image-temoignage {
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
 .temoignage-text {
-    margin: 20px;
+    margin: 10px;
 }
 
 .temoignage-gras {
@@ -350,10 +352,94 @@ footer {
 }
 
 .email img {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
 }
 
 .figcaption {
     margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menu a {
+        margin: 5px 0;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .euro {
+        width: 90%;
+        height: auto;
+    }
+
+    .mission {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .image-gauche {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .notre-mission {
+        width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .test-general {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .test-questions {
+        flex-direction: column;
+    }
+
+    .left-div, .right-div {
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .temoignage {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .pied {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
 }

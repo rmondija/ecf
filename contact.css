@@ -16,7 +16,6 @@ nav .espace {
     align-items: center;
     justify-content: center;
     margin-right: 20px;
-
 }
 
 .icon_header {
@@ -43,41 +42,25 @@ h1 {
 }
 
 .contact {
-    justify-content: left;
-    width: 958px;
+    justify-content: center;
+    width: 800px;
     height: 100vh;
-    margin-left: 200px;
+    margin-left: 250px;
+    padding-top: 20px;
     box-shadow: 0px 0px 5px grey;
 }
 
 .text {
-    margin: 20px;
+    margin-left: 50px;
+    padding-top: 30px;
 }
 
-#nom {
-    margin: 20px;
-}
-
-#text {
+#text, #email, #select {
     width: 80%;
     height: 25px;
-    margin: 20px;
-    border: 2px solid #D9D9D9;
-    border-radius: 5px;
-}
-
-#email {
-    width: 80%;
-    height: 25px;
-    margin: 20px;
-    border: 2px solid #D9D9D9;
-    border-radius: 5px;
-}
-
-#select {
-    width: 80%;
-    height: 30px;
-    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
     border: 2px solid #D9D9D9;
     border-radius: 5px;
 }
@@ -85,7 +68,121 @@ h1 {
 #message {
     width: 80%;
     height: 200px;
-    margin: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     border: 2px solid #D9D9D9;
     border-radius: 5px;
+}
+
+#button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 81%;
+    border: none;
+    border-radius: 5px;
+    background-color: #388140;
+    color: white;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+#button img {
+    margin: 10px;
+    width: 30px;
+    height: auto;
+}
+
+.figcaption {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        width: 600px;
+        margin-left: 150px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .espace {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
+
+    .contact {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu, .menu a {
+        margin: 5px 0;
+    }
+
+    .contact {
+        padding-top: 10px;
+    }
+
+    #text, #email, #select, #message {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #button {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #057858;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu {
+        text-align: left;
+        padding: 10px;
+        border-top: 1px solid #fff;
+    }
+
+    .menu a {
+        margin: 0;
+    }
+
+    .burger-icon {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .icon_header {
+        margin-right: auto;
+    }
 }
