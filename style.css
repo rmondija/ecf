@@ -140,6 +140,14 @@ nav .espace {
 .bouton2 {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 40px;
+    padding-top: 13px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #DB2727;
+    cursor: pointer;
 }
 
 .mission {
@@ -252,19 +260,11 @@ tr, td {
     background-color: #D7F3E5;
 }
 
-.test-general {
-    margin: 30px;
-    align-items: center;
-    justify-content: center;
-    width: 1129px;
-    height: 200px;
-    border-radius: 8px;
-    background-color: white;
-}
+
 
 .test-questions {
     display: flex;
-    background-color: #F3F4F6;
+    background-color: white;
     border-radius: 8px;
     align-items: center;
     justify-content: space-between;
@@ -272,29 +272,37 @@ tr, td {
 }
 
 .left-div {
+    background-color: #F3F4F6;
+    border-radius: 8px;
     margin: 20px;
     width: 500px;
-    height: 30px;
+    height: 60px;
     display: flex;
+    padding-left: 20px;
     justify-content: left;
     align-items: center;
 }
 
 .left-div:hover {
     background-color: #11B881;
+    color: white;
 }
 
 .right-div {
+    background-color: #F3F4F6;
+    border-radius: 8px;
     margin: 20px;
     width: 500px;
-    height: 30px;
+    height: 60px;
     display: flex;
+    padding-left: 20px;
     justify-content: left;
     align-items: center;
 }
 
 .right-div:hover {
     background-color: #11B881;
+    color: white;
 }
 
 .impact {
@@ -386,6 +394,10 @@ footer {
         flex-direction: column;
     }
 
+    .text-over, .text-over2{
+        display: none;
+    }
+
     .euro {
         width: 90%;
         height: auto;
@@ -411,6 +423,19 @@ footer {
         border-radius: 8px;
     }
 
+    .image-table img {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .image-container-table {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        height: auto;
+    }
+
     .test-general {
         width: 90%;
         height: auto;
@@ -430,6 +455,10 @@ footer {
     .temoignage {
         width: 90%;
         margin: 20px auto;
+    }
+
+    footer {
+        height: 250px;
     }
 
     .pied {
