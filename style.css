@@ -162,7 +162,7 @@ nav .espace {
     width: 628px;
     height: 446px;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 50px;
     margin-top: 5%;
     border-radius: 8px 0px 0px 8px;
 }
@@ -343,10 +343,6 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
-    margin: 20px;
-}
-
-.text-pied {
     margin: 20px;
 }
 

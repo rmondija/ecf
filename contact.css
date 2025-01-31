@@ -44,7 +44,7 @@ h1 {
 .contact {
     justify-content: center;
     width: 800px;
-    height: 100vh;
+    height: 700px;
     margin-left: 250px;
     padding-top: 20px;
     box-shadow: 0px 0px 5px grey;
@@ -104,6 +104,40 @@ h1 {
 .figcaption {
     margin-left: 10px;
     font-weight: bold;
+}
+
+footer {
+    height: 100px;
+    background-color: #1F2937;
+}
+
+.pied {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 20px;
+}
+
+.text-pied {
+    margin: 20px;
+}
+
+.contact1 {
+    justify-content: space-between;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.email img {
+    max-width: 30%;
+    height: auto;
+}
+
+.figcaption {
+    margin-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -190,5 +224,20 @@ h1 {
 
     .icon_header {
         margin-right: auto;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    .pied {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
     }
 }
