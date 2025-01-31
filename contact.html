@@ -29,11 +29,14 @@
     <h1>Contactez-nous</h1>
 
     <section class="contact">
+        <form id="myForm" onsubmit="return validateForm()">
             <label class="text" id="nom">Nom</label><br>
-            <input type="text" id="text"><br>
+            <input type="text" id="username"><br>
+            <div id="error-username" class="error"></div><br>
 
             <label class="text">Email</label><br>
-            <input type="email" id="email"><br>
+            <input type="text" id="email"><br>
+            <div id="error-email" class="error"></div><br>
 
             <label class="text">Sujet</label><br>
             <select id="select">
@@ -43,9 +46,10 @@
             </select><br>
 
             <label for="message" class="text">Message</label><br>
-            <textarea id="message" name="message"></textarea><br>
+            <textarea id="message" name="message" placeholder="Votre message"></textarea><br>
 
             <button id="button" type="submit"><img src="images/send.png">Envoyer</button>
+        </form> 
     </section>
 
 

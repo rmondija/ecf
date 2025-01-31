@@ -55,7 +55,7 @@ h1 {
     padding-top: 30px;
 }
 
-#text, #email, #select {
+#text, #username, #email, #select {
     width: 80%;
     height: 25px;
     margin-top: 10px;
@@ -73,6 +73,12 @@ h1 {
     margin-bottom: 20px;
     border: 2px solid #D9D9D9;
     border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 50px;
 }
 
 #button {
