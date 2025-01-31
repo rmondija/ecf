@@ -35,3 +35,55 @@ function validateForm() {
 
     return isValid; // Retourne true si tout est valide, false sinon
 }
+
+let montant = "";
+let periodeSelectionnee = "";
+
+function resultButton() {
+    const resultButton = document.getElementById("resultButton");
+    resultButton.innerHTML = `<img src="images/heart.png" alt="heart icon"> ${montant} ${periodeSelectionnee}`;
+}
+
+function modif(id) {
+    const div1 = document.getElementById("modif10");
+    const div2 = document.getElementById("modif20");
+    const div3 = document.getElementById("modif50");
+
+    div1.setAttribute("class", "euro");
+    div2.setAttribute("class", "euro");
+    div3.setAttribute("class", "euro");
+
+    if (id === "div1") {
+        div1.setAttribute("class", "euro eurovert");
+        montant = "Faire un don de 10€";
+    } else if (id === "div2") {
+        div2.setAttribute("class", "euro eurovert");
+        montant = "Faire un don de 20€";
+    } else if (id === "div3") {
+        div3.setAttribute("class", "euro eurovert");
+        montant = "Faire un don de 50€";    
+    }
+    resultButton();
+}
+
+function periode(id) {
+    const div1 = document.getElementById("une").getElementsByTagName('button')[0];
+    const div2 = document.getElementById("mois").getElementsByTagName('button')[0];
+    const div3 = document.getElementById("ans").getElementsByTagName('button')[0];
+
+    div1.setAttribute("class", "bouton1");
+    div2.setAttribute("class", "bouton1");
+    div3.setAttribute("class", "bouton1");
+
+    if (id === "div1") {
+        div1.setAttribute("class", "bouton1 bouton1vert");
+        periodeSelectionnee = "/une fois";
+    } else if (id === "div2") {
+        div2.setAttribute("class", "bouton1 bouton1vert");
+        periodeSelectionnee = "/par mois";
+    } else if (id === "div3") {
+        div3.setAttribute("class", "bouton1 bouton1vert");
+        periodeSelectionnee = "/par an";
+    }
+    resultButton();
+}

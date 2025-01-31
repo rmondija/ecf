@@ -35,31 +35,31 @@
         
         <section class="ombre">
         <div class="container">
-            <div class="euro">
+            <div class="euro" id="modif10" onclick="modif('div1')">
                 <p class="titre">10 €</p><br>
                 <p>permet de nourrir 5 animaux pendant une journée</p>
             </div>
-            <div class="euro">
+            <div class="euro" id="modif20" onclick="modif('div2')">
                 <p class="titre">20 €</p><br>
                 <p>permet d'héberger un animal sauvage pendant une nuit</p>
             </div>
-            <div class="euro">
+            <div class="euro" id="modif50" onclick="modif('div3')">
                 <p class="titre">50 €</p><br>
                 <p>permet de fiancer les soins vétérinaires complets pour un animal</p>
             </div>
         </div>
         <div class="periode">
-            <div>
+            <div id="une" onclick="periode('div1')">
                 <button class="bouton1">Une fois</button>
             </div>
-            <div>
+            <div id="mois" onclick="periode('div2')">
                 <button class="bouton1">Mensuel</button>
             </div>
-            <div>
+            <div id="ans" onclick="periode('div3')">
                 <button class="bouton1">Annuel</button>
             </div>
         </div>
-            <button class="bouton2"><img src="images/heart.png">Faire un don de 50€/mois</button>
+            <button class="bouton2" id="resultButton"><img class="coeur" src="images/heart.png">Faire un don de 50€/mois</button>
         </section>
         <br><br>
 
