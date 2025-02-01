@@ -280,7 +280,7 @@ tr, td {
     margin: 10px;    
 }
 
-.left-div {
+.left1-div {
     background-color: #F3F4F6;
     border-radius: 8px;
     margin: 20px;
@@ -292,12 +292,11 @@ tr, td {
     align-items: center;
 }
 
-.left-div:hover {
-    background-color: #11B881;
-    color: white;
+.left1-div:hover {
+    border: solid 2px lightgray;
 }
 
-.right-div {
+.right1-div {
     background-color: #F3F4F6;
     border-radius: 8px;
     margin: 20px;
@@ -309,9 +308,88 @@ tr, td {
     align-items: center;
 }
 
-.right-div:hover {
-    background-color: #11B881;
-    color: white;
+.right1-div:hover {
+    border: solid 2px lightgray;
+}
+
+.left2-div {
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    margin: 20px;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.left2-div:hover {
+    border: solid 2px lightgray;
+}
+
+.right2-div {
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    margin: 20px;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.right2-div:hover {
+    border: solid 2px lightgray;
+}
+
+.left3-div {
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    margin: 20px;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.left3-div:hover {
+    border: solid 2px lightgray;
+}
+
+.right3-div {
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    margin: 20px;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+.right3-div:hover {
+    border: solid 2px lightgray;
+}
+
+.divOk {
+    background-color: #CCFFE7;
+}
+
+.divFalse {
+    background-color: lightpink;
+}
+
+.width {
+    width: 100%;
+}
+
+.display {
+    display: none;
 }
 
 .impact {

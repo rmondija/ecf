@@ -59,7 +59,7 @@
                 <button class="bouton1">Annuel</button>
             </div>
         </div>
-            <button class="bouton2" id="resultButton"><img class="coeur" src="images/heart.png">Faire un don de 50€/mois</button>
+            <button class="bouton2" id="resultButton" onclick="afficherAlerte()"><img class="coeur" src="images/heart.png">Faire un don de 20€ / mois</button>
         </section>
         <br><br>
 
@@ -93,43 +93,45 @@
         </table> 
         <br>
         <br>
+
         <div class="mission-test">
             <h1 class="text-centre">Testez Vos Connaissances</h1>
             <br><br>
             <div class="test-general">
                 <h2 class="titre2">Les associations gardent la majorité des dons pour leur fonctionnement</h2>
                 <div class="test-questions">
-                    <div class="left-div">
+                    <div class="left1-div" id="q1" onclick="quiz('div1')">
                         <p>Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</p>
                     </div>
-                    <div class="right-div">
-                        <p>Faux</p>
+                    <div class="right1-div" id="q2" onclick="quiz('div2')">
+                        <p id="resultQuiz">Faux</p>
                     </div>
                 </div>
             </div>
             <div class="test-general">
                 <h2 class="titre2">Les refuges ne prennent que les animaux en bonne santé</h2>
                 <div class="test-questions">
-                    <div class="left-div">
+                    <div class="left2-div" id="q3" onclick="quiz('div3')">
                         <p>Vrai, ils refusent les animaux malades c’est trop couteux</p>
                     </div>
-                    <div class="right-div">
-                        <p>Faux</p>
+                    <div class="right2-div" id="q4" onclick="quiz('div4')">
+                        <p id="resultQuiz">Faux</p>
                     </div>
                 </div>
             </div>
             <div class="test-general">
                 <h2 class="titre2">Les associations ont trop de moyens grâce aux dons</h2>
                 <div class="test-questions">
-                    <div class="left-div">
+                    <div class="left3-div" id="q5" onclick="quiz('div5')">
                         <p>Vrai, elles reçoivent beaucoup d’argent des donateurs</p>
                     </div>
-                    <div class="right-div">
-                        <p>Faux</p>
+                    <div class="right3-div" id="q6" onclick="quiz('div6')">
+                        <p id="resultQuiz">Faux</p>
                     </div>
                 </div>
             </div>
             <br><br>
+
             <h1 class="text-centre">Notre impact</h1>
             <br><br>
             <div class="container">
