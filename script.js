@@ -44,8 +44,11 @@ function validateForm() {
     return isValid; // Retourne true si tout est valide, false sinon
 }
 
-let montant = "";
-let periodeSelectionnee = "";
+let montant = "20€";
+let periodeSelectionnee = "mois";
+
+div2.setAttribute("class", "euro eurovert");
+montant = "20€";
 
 function resultButton() {
     const resultButton = document.getElementById("resultButton");
@@ -88,10 +91,10 @@ function periode(id) {
         periodeSelectionnee = "une fois";
     } else if (id === "div2") {
         div2.setAttribute("class", "bouton1 bouton1vert");
-        periodeSelectionnee = "par mois";
+        periodeSelectionnee = "mois";
     } else if (id === "div3") {
         div3.setAttribute("class", "bouton1 bouton1vert");
-        periodeSelectionnee = "par an";
+        periodeSelectionnee = "an";
     }
     resultButton();
 }
@@ -121,7 +124,7 @@ function quiz(id) {
     div5.setAttribute("class", "left3-div");
     div5.innerHTML = "Vrai, elles reçoivent beaucoup d’argent des donateurs";
     div6.setAttribute("class", "right3-div");
-    div6.innerHTML = "Faut !";
+    div6.innerHTML = "Faux !";
 
 
     div1.setAttribute("class", "left1-div");
