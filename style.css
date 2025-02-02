@@ -193,26 +193,62 @@ nav .espace {
     border-radius: 0 8px 8px 0;
 }
 
-table {
-    width: 100%;
+.image-table {
+    width: 50%;
     margin: auto;
 }
-
-tr, td {
+.image-container-table {
     width: 100%;
+    height: 300px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Maintenir le ratio d'aspect */
+    position: relative;
+}
+.image-container-table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposition de couleur */
+}
+.image-petit {
+    width: 100%;
+    height: 300px; /* Hauteur fixe pour les petites images */
+    overflow: hidden;
+    position: relative;
+}
+.image-row {
+    display: flex;
+    justify-content: space-between;
+}
+.image-item {
+    flex: 1;
+    margin: 0 5px;
+}
+.image-item img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposition de couleur */
+}
+.text-overlay-table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
     text-align: center;
 }
-
-.image-table {
+th, td {
     position: relative;
-    width: 100%;
-    max-width: 600px; /* Vous pouvez ajuster la largeur selon vos besoins */
-}
-
-.image-container-table img {
-    width: 100%;
-    height: auto;
-}
+    text-align: center;
+}a
 
 .text-overlay-table {
     display: flex;
