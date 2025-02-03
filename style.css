@@ -194,99 +194,74 @@ nav .espace {
 }
 
 .image-table {
+    width: 100%;
+    margin: auto;
+    filter: brightness(0.7);
+}
+
+.image-container1 {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Hauteur uniforme pour toutes les images */
+}
+
+.image-container-table {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -5%);
+    color: white;  
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.image-table {
     width: 50%;
     margin: auto;
 }
-.image-container-table {
-    width: 100%;
-    height: 300px; /* Hauteur fixe pour toutes les images */
-    object-fit: cover; /* Maintenir le ratio d'aspect */
-    position: relative;
-}
-.image-container-table::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Superposition de couleur */
-}
+
 .image-petit {
     width: 100%;
-    height: 300px; /* Hauteur fixe pour les petites images */
+    height: 100px;
     overflow: hidden;
     position: relative;
 }
+
 .image-row {
     display: flex;
     justify-content: space-between;
 }
+
 .image-item {
     flex: 1;
     margin: 0 5px;
 }
-.image-item img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.image-item img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Superposition de couleur */
-}
-.text-overlay-table {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    text-align: center;
-}
-th, td {
-    position: relative;
-    text-align: center;
-}a
-
-.text-overlay-table {
-    display: flex;
-    text-align: left;
-    position: absolute;
-    top: 60%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 14px;
-    padding: 10px;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
 
-.text-overlay-table2 {
-    position: absolute;
-    top: 85%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20px;
-}
-
-.text-overlay-table3 {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20px;
-}
-
+.text-overlay-table2,
+.text-overlay-table3,
 .text-overlay-table4 {
     position: absolute;
-    top: 85%;
-    left: 85%;
-    transform: translate(-50%, -50%);
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
     font-size: 20px;
+    text-align: center;
 }
 
 .text-centre {
@@ -446,7 +421,8 @@ th, td {
 
 .image-temoignage {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 .temoignage-text {

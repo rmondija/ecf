@@ -169,8 +169,8 @@ function quiz(id) {
 }
 
 function diaporama(element) {
-    var imageSrc = element.src;
-    var imageTexte = element.getAttribute("data-texte");
+    const imageSrc = element.src;
+    const imageTexte = element.getAttribute("data-texte");
     document.getElementById("image").src = imageSrc;
     document.getElementById("texte-principal").innerHTML = imageTexte;
 }
