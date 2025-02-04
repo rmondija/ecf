@@ -2,7 +2,7 @@
 Evaluation en Cours de Formation
 
 Le travail a été compliqué sur certains points.
-Je me suis aidé du site mdn et l'ia de copilot.
+Je me suis aidé du site mdn et les exercices avec zak et Mick.
 
 Pour la maquette figma, je l'ai réalisé en un jour, comprenant tes commentaires.
 
