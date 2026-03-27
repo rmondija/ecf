@@ -303,10 +303,6 @@ nav .espace {
     align-items: center;
 }
 
-.left1-div:hover {
-    border: solid 2px lightgray;
-}
-
 .right1-div {
     background-color: #F3F4F6;
     border-radius: 8px;
@@ -317,10 +313,6 @@ nav .espace {
     padding-left: 20px;
     justify-content: left;
     align-items: center;
-}
-
-.right1-div:hover {
-    border: solid 2px lightgray;
 }
 
 .left2-div {
@@ -335,10 +327,6 @@ nav .espace {
     align-items: center;
 }
 
-.left2-div:hover {
-    border: solid 2px lightgray;
-}
-
 .right2-div {
     background-color: #F3F4F6;
     border-radius: 8px;
@@ -349,10 +337,6 @@ nav .espace {
     padding-left: 20px;
     justify-content: left;
     align-items: center;
-}
-
-.right2-div:hover {
-    border: solid 2px lightgray;
 }
 
 .left3-div {
@@ -367,10 +351,6 @@ nav .espace {
     align-items: center;
 }
 
-.left3-div:hover {
-    border: solid 2px lightgray;
-}
-
 .right3-div {
     background-color: #F3F4F6;
     border-radius: 8px;
@@ -381,10 +361,6 @@ nav .espace {
     padding-left: 20px;
     justify-content: left;
     align-items: center;
-}
-
-.right3-div:hover {
-    border: solid 2px lightgray;
 }
 
 .divOk {

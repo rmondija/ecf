@@ -47,8 +47,29 @@ function validateForm() {
 let montant = "20€";
 let periodeSelectionnee = "mois";
 
-div2.setAttribute("class", "euro eurovert");
-montant = "20€";
+const quizState = {
+    1: null,
+    2: null,
+    3: null,
+};
+
+const quizDefaults = {
+    q1: "Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement",
+    q2: "Faux !",
+    q3: "Vrai, ils refusent les animaux malades c’est trop couteux",
+    q4: "Faux !",
+    q5: "Vrai, elles reçoivent beaucoup d’argent des donateurs",
+    q6: "Faux !",
+};
+
+const quizResultText = {
+    q1: '<img src="images/done.png"> Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement',
+    q2: '<img src="images/close.png"> Faux ! Chez Quatres Pattes, 85% des dons sont dierctement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.',
+    q3: '<img src="images/close.png"> Vrai, ils refusent les animaux malades c’est trop couteux',
+    q4: '<img src="images/done.png"> Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte.',
+    q5: '<img src="images/done.png"> Vrai, elles reçoivent beaucoup d’argent des donateurs.',
+    q6: '<img src="images/close.png"> Faux ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.',
+};
 
 function resultButton() {
     const resultButton = document.getElementById("resultButton");
@@ -103,68 +124,58 @@ function afficherAlerte() {
     alert("Merci pour votre don !");
 }
 
+function getBaseClass(id) {
+    return {
+        q1: "left1-div",
+        q2: "right1-div",
+        q3: "left2-div",
+        q4: "right2-div",
+        q5: "left3-div",
+        q6: "right3-div",
+    }[id];
+}
+
+function getQuizGroup(id) {
+    if (id === "q1" || id === "q2") return 1;
+    if (id === "q3" || id === "q4") return 2;
+    if (id === "q5" || id === "q6") return 3;
+    return null;
+}
+
+function renderQuizGroup(group) {
+    const ids = group === 1 ? ["q1", "q2"] : group === 2 ? ["q3", "q4"] : ["q5", "q6"];
+    const selected = quizState[group];
+
+    ids.forEach((qid) => {
+        const div = document.getElementById(qid);
+        const baseClass = getBaseClass(qid);
+
+        if (!selected) {
+            div.className = baseClass;
+            div.innerHTML = quizDefaults[qid];
+            return;
+        }
+
+        if (qid === selected) {
+            const correct = qid === "q1" || qid === "q4" || qid === "q5";
+            div.className = `${baseClass} ${correct ? "divOk" : "divFalse"} width`;
+            div.innerHTML = quizResultText[qid];
+        } else {
+            div.className = `${baseClass} display`;
+            div.innerHTML = quizDefaults[qid];
+        }
+    });
+}
+
 function quiz(id) {
-    const div1 = document.getElementById("q1");
-    const div2 = document.getElementById("q2");
+    const quizId = id.replace("div", "q");
+    const group = getQuizGroup(quizId);
+    if (!group) return;
 
-    const div3 = document.getElementById("q3");
-    const div4 = document.getElementById("q4");
+    quizState[group] = quizId;
+    renderQuizGroup(group);
 
-    const div5 = document.getElementById("q5");
-    const div6 = document.getElementById("q6");
-    
-    div1.setAttribute("class", "left1-div");
-    div1.innerHTML = "Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement";
-    div2.setAttribute("class", "right1-div");
-    div2.innerHTML = "Faux !";
-    div3.setAttribute("class", "left2-div");
-    div3.innerHTML = "Vrai, ils refusent les animaux malades c’est trop couteux";
-    div4.setAttribute("class", "right2-div");
-    div4.innerHTML = "Faux !";
-    div5.setAttribute("class", "left3-div");
-    div5.innerHTML = "Vrai, elles reçoivent beaucoup d’argent des donateurs";
-    div6.setAttribute("class", "right3-div");
-    div6.innerHTML = "Faux !";
-
-
-    div1.setAttribute("class", "left1-div");
-    div2.setAttribute("class", "right1-div ");
-
-    div3.setAttribute("class", "left2-div");
-    div4.setAttribute("class", "right2-div");
-
-    div5.setAttribute("class", "left3-div");
-    div6.setAttribute("class", "right3-div");
-
-    if (id === "div1") {
-        div1.setAttribute("class", "left1-div divOk width");
-        div2.setAttribute("class", "right1-div display")
-        div1.innerHTML = '<img src="images/done.png"> Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement';
-    } else if (id === "div2") {
-        div2.setAttribute("class", "right1-div divFalse width");
-        div1.setAttribute("class", "left1-div display")
-        div2.innerHTML = '<img src="images/close.png"> Faux ! Chez Quatres Pattes, 85% des dons sont dierctement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.';
-    }
-
-    if (id === "div3") {
-        div3.setAttribute("class", "left2-div divFalse width");
-        div4.setAttribute("class", "right2-div display")
-        div3.innerHTML = '<img src="images/close.png"> Vrai, ils refusent les animaux malades c’est trop couteux';
-    } else if (id === "div4") {
-        div4.setAttribute("class", "right2-div divOk width");
-        div3.setAttribute("class", "left2-div display")
-        div4.innerHTML = '<img src="images/done.png"> Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte.'
-    }
-
-    if (id === "div5") {
-        div5.setAttribute("class", "left3-div divOk width");
-        div6.setAttribute("class", "right3-div display")
-        div5.innerHTML = '<img src="images/done.png"> Vrai, elles reçoivent beaucoup d’argent des donateurs.'
-    } else if (id === "div6") {
-        div6.setAttribute("class", "right3-div divFalse width");
-        div5.setAttribute("class", "left3-div display")
-        div6.innerHTML = '<img src="images/close.png"> Faux ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.'
-    }
+    // Ne réinitialise pas les autres questions : l'état est conservé
     resultButton();
 }
 
