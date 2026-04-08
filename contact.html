@@ -6,6 +6,7 @@
 
     <title>Quatre Pattes</title>
 
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="contact.css">
     <script src="script.js" defer></script>
     
@@ -15,11 +16,11 @@
     <header>
         <nav class="nav">
             <div class="espace nav-brand">
-                <div class="icon_header"><img class="icon_header" src="images/icon_header.png" alt="Logo Quatre Pattes"></div>
+                <img class="icon_header" src="images/icon_header.png" alt="Logo Quatre Pattes">
                 <button class="menu-close" id="closeMenu" type="button" aria-label="Fermer le menu">×</button>
             </div>
             <div class="espace nav-links" id="navLinks">
-                <div class="menu" id="menu"><a href="index.html">Accueil</a></div>
+                <div class="menu"><a href="index.html">Accueil</a></div>
                 <div class="menu"><a href="contact.html">Contact</a></div>
                 <div class="menu menu-don"><a class="don-link" href="index.html#don">Faire un don</a></div>
             </div>
@@ -28,17 +29,17 @@
     <main>
         <h1>Contactez-nous</h1>
 
-        <section class="contact">
+        <section class="contact-form">
             <form id="myForm" onsubmit="return validateForm()">
-                <label class="text" id="nom">Nom</label>
+                <label class="text" for="username">Nom</label>
                 <input type="text" id="username">
                 <div id="error-username" class="error"></div>
 
-                <label class="text">Email</label>
+                <label class="text" for="email">Email</label>
                 <input type="email" id="email">
                 <div id="error-email" class="error"></div>
 
-                <label class="text">Sujet</label>
+                <label class="text" for="select">Sujet</label>
                 <select id="select">
                     <option value="">Choisissez une option</option>
                     <option value="questions">Question sur les dons</option>
@@ -57,18 +58,18 @@
     </main>
     <footer>
         <div class="pied">
-            <div class="contact1">
+            <div class="contact">
                 <p>Quatre Pattes</p>
                 <p>Ensemble, protégeons les animaux et donnons-leur une vie meilleure.</p>
             </div>
-            <div class="contact1">
+            <div class="contact">
                 <p>Contact</p>
                     <div class="email">
                         <img src="images/mail.png" alt="Icone email" loading="lazy">
                         <figcaption class="figcaption">contact@quattrespattes.org</figcaption>
                     </div>
             </div>
-            <div class="contact1">
+            <div class="contact">
                 <p>Suivez-nous</p>
             </div>
         </div>
