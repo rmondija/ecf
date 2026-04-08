@@ -1,5 +1,11 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    margin: Opx;
+    margin: 0;
     padding: 0px;
     font-family: sans-serif;
 }
@@ -24,12 +30,13 @@ nav .espace {
 
 .menu {
     display: flex;
-    margin-top: 25px;
+    align-items: center;
+    margin-top: 0;
     margin-right: 10px;
     text-align: right;
 }
 
-.menu, a {
+.menu a {
     color: white;
     text-decoration: none;
     justify-content: space-between;
@@ -42,43 +49,77 @@ h1 {
 }
 
 .contact {
-    justify-content: center;
-    width: 800px;
-    height: 700px;
-    margin-left: 250px;
-    padding-top: 20px;
-    box-shadow: 0px 0px 5px grey;
+    width: min(700px, 80%);
+    min-height: auto;
+    margin: 0 auto 30px;
+    padding: 20px 10px;
+    box-shadow: 0px 6px 10px -2px rgba(0,0,0,0.12);
+    border-radius: 8px;
 }
 
 .text {
+    display: block;
     margin-left: 50px;
-    padding-top: 30px;
+    padding-top: 8px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1F2937;
 }
 
-#text, #username, #email, #select {
+#username,
+#email,
+#select {
+    display: block;
     width: 80%;
-    height: 25px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    height: 45px;
+    padding: 10px 12px;
+    margin-top: 4px;
+    margin-bottom: 2px;
     margin-left: 50px;
-    border: 2px solid #D9D9D9;
-    border-radius: 5px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: sans-serif;
+    transition: border-color 0.3s;
+}
+
+#username:focus,
+#email:focus,
+#select:focus {
+    outline: none;
+    border-color: #057858;
 }
 
 #message {
+    display: block;
     width: 80%;
-    height: 200px;
+    height: 180px;
+    padding: 12px;
     margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #D9D9D9;
-    border-radius: 5px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+#message:focus {
+    outline: none;
+    border-color: #057858;
 }
 
 .error {
-    color: red;
-    font-size: 0.9em;
+    display: block;
+    color: #DC2626;
+    font-size: 0.85em;
     margin-left: 50px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    min-height: 18px;
 }
 
 #button {
@@ -86,24 +127,23 @@ h1 {
     text-align: center;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     width: 81%;
+    height: 45px;
     border: none;
-    border-radius: 5px;
-    background-color: #388140;
+    border-radius: 8px;
+    background-color: #057858;
     color: white;
     margin-left: 50px;
+    margin-top: 10px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
-#button img {
-    margin: 10px;
-    width: 30px;
-    height: auto;
-}
-
-.figcaption {
-    margin-left: 10px;
-    font-weight: bold;
+#button:hover {
+    background-color: #046346;
 }
 
 footer {
@@ -141,19 +181,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .contact {
-        width: 600px;
-        margin-left: 150px;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 768px) {
     nav .espace {
         flex-direction: column;
         margin-right: 0;
@@ -164,8 +191,7 @@ footer {
     }
 
     .contact {
-        width: 100%;
-        margin-left: 0;
+        width: 95%;
         padding: 10px;
     }
 }
@@ -184,7 +210,10 @@ footer {
         padding-top: 10px;
     }
 
-    #text, #email, #select, #message {
+    #username,
+    #email,
+    #select,
+    #message {
         width: 90%;
         margin-left: 5%;
     }
@@ -196,48 +225,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .menu-items {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #057858;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        z-index: 1;
-    }
-
-    .menu {
-        text-align: left;
-        padding: 10px;
-        border-top: 1px solid #fff;
-    }
-
-    .menu a {
-        margin: 0;
-    }
-
-    .burger-icon {
-        display: block;
-        margin-right: 20px;
-    }
-
-    .icon_header {
-        margin-right: auto;
-    }
-
     footer {
-        height: 250px;
+        height: auto;
     }
 
     .pied {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    .contact {
-        flex-direction: column;
-        align-items: center;
     }
 }

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Quatres Pattes</title>
+    <title>Quatre Pattes</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     
     <link rel="icon" type="image/png" href="images/logo_black.png" />
 </head>
@@ -15,37 +15,37 @@
     <header>
         <nav class="nav">
             <div class="espace">
-                <div class="icon_header"><img class="icon_header" src="images/icon_header.png" alt="icone header" ></div>
+                <div class="icon_header"><img class="icon_header" src="images/icon_header.png" alt="Logo Quatre Pattes"></div>
             </div>
             <div class="espace">
                 <div class="menu"><a href="index.html">Accueil</a></div>
                 <div class="menu"><a href="contact.html">Contact</a></div>
-                <div class="menu"><a href="#don"><img src="images/bouton.png"></a></div>
+                <div class="menu"><a href="#don"><img src="images/bouton.png" alt="Bouton de don"></a></div>
             </div>
         </nav>
     </header>
 
     <main>
         <div class="image-container">
-            <img class="image-haut" src="images/haut.png">
+            <img class="image-haut" src="images/haut.png" alt="Animaux secourus">
             <div class="text-over">Protégeons-les Ensemble</div>
             <div class="text-over2">Chaque don compte pour leur offrir une vie meilleure</div>
         </div>
         <div class="text-centre" id="don"><h1>Faites un don</h1></div>
         
-        <section class="ombre">
+        <section class="ombre section-block">
         <div class="container">
             <div class="euro" id="modif10" onclick="modif('div1')">
-                <p class="titre">10 €</p><br>
+                <p class="titre">10 €</p>
                 <p>permet de nourrir 5 animaux pendant une journée</p>
             </div>
-            <div class="euro" id="modif20" onclick="modif('div2')">
-                <p class="titre">20 €</p><br>
+            <div class="euro eurovert" id="modif20" onclick="modif('div2')">
+                <p class="titre">20 €</p>
                 <p>permet d'héberger un animal sauvage pendant une nuit</p>
             </div>
             <div class="euro" id="modif50" onclick="modif('div3')">
-                <p class="titre">50 €</p><br>
-                <p>permet de fiancer les soins vétérinaires complets pour un animal</p>
+                <p class="titre">50 €</p>
+                <p>permet de financer les soins vétérinaires complets pour un animal</p>
             </div>
         </div>
         <div class="periode">
@@ -53,140 +53,135 @@
                 <button class="bouton1">Une fois</button>
             </div>
             <div id="mois" onclick="periode('div2')">
-                <button class="bouton1">Mensuel</button>
+                <button class="bouton1 bouton1vert">Mensuel</button>
             </div>
             <div id="ans" onclick="periode('div3')">
                 <button class="bouton1">Annuel</button>
             </div>
         </div>
-            <button class="bouton2" id="resultButton" onclick="afficherAlerte()"><img class="coeur" src="images/heart.png">Faire un don de 20€ / mois</button>
+            <button class="bouton2" id="resultButton" onclick="afficherAlerte()"><img class="coeur" src="images/heart.png" alt="Coeur">Faire un don de 20€ / mois</button>
         </section>
-        <br><br>
 
-        <div class="mission">
+        <div class="mission section-block">
             <div>
-                <img class="image-gauche" src="images/mission.jpg">
+                <img class="image-gauche" src="images/mission.jpg" alt="Equipe en mission de secours" loading="lazy">
                 <div class="notre-mission">
                     <h1>Notre mission</h1>
-                    <p>Depuis 2010, Quatres Pattes oeuvre sans relâche pour la protection et le bien-être des animaux en France. Notre mission est double : secourir les animaux en détresse et sensibiliser le plublic  à la cause animale.<br><br>    
-                        Chaque année, nous prenons en charge plsu de 1000 animaux abandonnés, maltraités ou blessés. Grâce à notre réseau de familles d’accueil et nos partenariats avec des refuges , nous leur offrons une seconde chance.<br><br>
-                        Votre soutien est essentiel pour continuer notre mission. Ensemble, nous pouvons faire la différence pour ces êtres qui comptes sur nous.</p>   
+                    <p>Depuis 2010, Quatre Pattes oeuvre sans relâche pour la protection et le bien-être des animaux en France. Notre mission est double : secourir les animaux en détresse et sensibiliser le public à la cause animale.<br><br>
+                        Chaque année, nous prenons en charge plus de 1000 animaux abandonnés, maltraités ou blessés. Grâce à notre réseau de familles d’accueil et à nos partenariats avec des refuges, nous leur offrons une seconde chance.<br><br>
+                        Votre soutien est essentiel pour continuer notre mission. Ensemble, nous pouvons faire la différence pour ces êtres qui comptent sur nous.</p>
                 </div>
             </div>
         </div>
 
-        <br><br>
-        <div class="text-centre"><h1>Histoires de Réussite</h1></div>
-        <br>
+        <div class="text-centre section-heading"><h1>Histoires de Réussite</h1></div>
         <table class="image-table">
             <tr>
                 <th colspan="3">
                     <div class="image-container1 image-item">
-                        <img class="image-container-table" id="image" src="images/luna.jpg" alt="Luna">
-                        <div id="texte-principal" class="text-overlay"></div>
+                        <img class="image-container-table" id="image" src="images/luna.jpg" alt="Luna" loading="lazy">
+                        <div id="texte-principal" class="text-overlay"><strong>Luna</strong><br>Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille.<br><span class="text-date">Janvier 2024</span></div>
                     </div>
                 </th>
             </tr>
             <tr class="image-row">
                 <td class="image-item">
                     <div class="image-petit">
-                        <img class="image-container-table" id="t1" onclick="diaporama(this)" src="images/luna.jpg" alt="Luna" data-texte="Luna<br>Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille.<br>Janvier 2024">
-                        <p class="text-overlay-table2">Luna</p>
+                        <img class="image-container-table" id="t1" onclick="diaporama(this)" src="images/luna.jpg" alt="Luna" data-texte="<strong>Luna</strong><br>Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille.<br><span class=&quot;text-date&quot;>Janvier 2024</span>" loading="lazy">
+                        <p class="text-overlay-table2" onclick="diaporama(document.getElementById('t1'))">Luna</p>
                     </div>
                 </td>
                 <td class="image-item">
                     <div class="image-petit">
-                        <img class="image-container-table" id="t2" onclick="diaporama(this)" src="images/oscar.jpg" alt="Oscar" data-texte="Oscar<br>Abandonné dans une forêt, Oscar était terrifié par les humains. Après des mois de patience et d’amour, il est devenu un chat confiant et affectueux.<br>Mars 2024">
-                        <p class="text-overlay-table3">Oscar</p>
+                        <img class="image-container-table" id="t2" onclick="diaporama(this)" src="images/oscar.jpg" alt="Oscar" data-texte="<strong>Oscar</strong><br>Abandonné dans une forêt, Oscar était terrifié par les humains. Après des mois de patience et d'amour, il est devenu un chat confiant et affectueux.<br><span class=&quot;text-date&quot;>Mars 2024</span>" loading="lazy">
+                        <p class="text-overlay-table3" onclick="diaporama(document.getElementById('t2'))">Oscar</p>
                     </div>
                 </td>
                 <td class="image-item">
                     <div class="image-petit">
-                        <img class="image-container-table" id="t3" onclick="diaporama(this)" src="images/max.jpg" alt="Max" data-texte="Max<br>Sauvé d'un laboratoire, Max n'avait jamais connu l'amour. Aujourd'hui, il profite de sa liberté et fait le bonheur de sa famille d'accueil.<br>Février 2024">
-                        <p class="text-overlay-table4">Max</p>
+                        <img class="image-container-table" id="t3" onclick="diaporama(this)" src="images/max.jpg" alt="Max" data-texte="<strong>Max</strong><br>Sauvé d'un laboratoire, Max n'avait jamais connu l'amour. Aujourd'hui, il profite de sa liberté et fait le bonheur de sa famille d'accueil.<br><span class=&quot;text-date&quot;>Février 2024</span>" loading="lazy">
+                        <p class="text-overlay-table4" onclick="diaporama(document.getElementById('t3'))">Max</p>
                     </div>
                 </td>
             </tr>
         </table>
-        <br>
-        <br>
 
-        <div class="mission-test">
+        <div class="mission-test section-block">
             <h1 class="text-centre">Testez Vos Connaissances</h1>
-            <br><br>
             <div class="test-general">
-                <h2 class="titre2">Les associations gardent la majorité des dons pour leur fonctionnement</h2>
                 <div class="test-questions">
-                    <div class="left1-div" id="q1" onclick="quiz('div1')">
-                        <p>Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</p>
-                    </div>
-                    <div class="right1-div" id="q2" onclick="quiz('div2')">
-                        <p id="resultQuiz">Faux</p>
+                    <h2 class="quiz-title">Les associations gardent la majorité des dons pour leur fonctionnement</h2>
+                    <div class="quiz-options">
+                        <div class="left1-div" id="q1" onclick="quiz('div1')">
+                            <p>Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</p>
+                        </div>
+                        <div class="right1-div" id="q2" onclick="quiz('div2')">
+                            <p>Faux</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="test-general">
-                <h2 class="titre2">Les refuges ne prennent que les animaux en bonne santé</h2>
                 <div class="test-questions">
-                    <div class="left2-div" id="q3" onclick="quiz('div3')">
-                        <p>Vrai, ils refusent les animaux malades c’est trop couteux</p>
-                    </div>
-                    <div class="right2-div" id="q4" onclick="quiz('div4')">
-                        <p id="resultQuiz">Faux</p>
+                    <h2 class="quiz-title">Les refuges ne prennent que les animaux en bonne santé</h2>
+                    <div class="quiz-options">
+                        <div class="left2-div" id="q3" onclick="quiz('div3')">
+                            <p>Vrai, ils refusent les animaux malades c’est trop couteux</p>
+                        </div>
+                        <div class="right2-div" id="q4" onclick="quiz('div4')">
+                            <p>Faux</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="test-general">
-                <h2 class="titre2">Les associations ont trop de moyens grâce aux dons</h2>
                 <div class="test-questions">
-                    <div class="left3-div" id="q5" onclick="quiz('div5')">
-                        <p>Vrai, elles reçoivent beaucoup d’argent des donateurs</p>
-                    </div>
-                    <div class="right3-div" id="q6" onclick="quiz('div6')">
-                        <p id="resultQuiz">Faux</p>
+                    <h2 class="quiz-title">Les associations ont trop de moyens grâce aux dons</h2>
+                    <div class="quiz-options">
+                        <div class="left3-div" id="q5" onclick="quiz('div5')">
+                            <p>Vrai, elles reçoivent beaucoup d’argent des donateurs</p>
+                        </div>
+                        <div class="right3-div" id="q6" onclick="quiz('div6')">
+                            <p>Faux</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <br><br>
-
-            <h1 class="text-centre">Notre impact</h1>
-            <br><br>
+            <h1 class="text-centre section-heading">Notre impact</h1>
             <div class="container">
                 <div class="impact">
-                    <img class="image-impact" src="images/house.svg"><br>
+                    <img class="image-impact" src="images/house.svg" alt="Refuges partenaires" loading="lazy"><br>
                     <h1>50+ Refuges</h1>
                     <p>Partenaires à travers la France</p>
                 </div>
                 <div class="impact">
-                    <img class="image-impact" src="images/logo.svg"><br>
+                    <img class="image-impact" src="images/logo.svg" alt="Animaux sauves" loading="lazy"><br>
                     <h1>1000+ animaux</h1>
                     <p>Sauvés chaque année</p>
                 </div>
                 <div class="impact">
-                    <img class="image-impact" src="images/utensils.svg"><br>
+                    <img class="image-impact" src="images/utensils.svg" alt="Repas distribues" loading="lazy"><br>
                     <h1>10 000+ repas</h1>
                     <p>Distribués par mois</p>
                 </div>
             </div>
         </div>
-        <br><br>
-        <h2 class="titre2">Témoignages</h2>
-        <br><br>
+        <h2 class="titre2 section-heading">Témoignages</h2>
 
-        <div class="container">
+        <div class="container temoignages-container section-block">
             <div class="temoignage">
-                <img class="image-temoignage" src="images/refuge_lyon.png"><br>
+                <img class="image-temoignage" src="images/refuge_lyon.png" alt="Refuge partenaire de Lyon" loading="lazy"><br>
                 <p class="temoignage-text">“Grâce aux dons, nous avons pu accueillir plus de 200 animaux cette année et leur offrir  une seconde chance.”</p>
-                <p class="temoignage-gras temoignage-text">Refus des Quatres Pattes - Lyon</p>
+                <p class="temoignage-gras temoignage-text">Refuge Quatre Pattes - Lyon</p>
             </div>
             <div class="temoignage">
-                <img class="image-temoignage" src="images/refuge_marseille.png"><br>
-                <p class="temoignage-text">“Le soutien de Quatres Pattes nous permet de maintenir notre mission de protection des animaux sauvages en détresse.”</p>
+                <img class="image-temoignage" src="images/refuge_marseille.png" alt="Sanctuaire partenaire de Marseille" loading="lazy"><br>
+                <p class="temoignage-text">“Le soutien de Quatre Pattes nous permet de maintenir notre mission de protection des animaux sauvages en détresse.”</p>
                 <p class="temoignage-gras temoignage-text">Sanctuaire animal - Marseille</p>
             </div>
             <div class="temoignage">
-                <img class="image-temoignage" src="images/refuge_paris.png"><br>
-                <p class="temoignage-text">“Chaque don compte et nous aide à offrir une avenir meilleur aux animaux abandonnés.”</p>
+                <img class="image-temoignage" src="images/refuge_paris.png" alt="Refuge partenaire de Paris" loading="lazy"><br>
+                <p class="temoignage-text">“Chaque don compte et nous aide à offrir un avenir meilleur aux animaux abandonnés.”</p>
                 <p class="temoignage-gras temoignage-text">Refuge du soleil - Paris</p>
             </div>
         </div>
@@ -195,14 +190,14 @@
     <footer>
         <div class="pied">
             <div class="contact">
-                <p>Quattres pattes</p>
-                <p>Ensemble, protégeons les animauux et donnons-leur une vie meilleure.</p>
+                <p>Quatre Pattes</p>
+                <p>Ensemble, protégeons les animaux et donnons-leur une vie meilleure.</p>
             </div>
             <div class="contact">
                 <p>Contact</p>
                     <div class="email">
-                        <img src="images/mail.png">
-                        <figcaption class="figcaption">contact@quattrespattes.org</figcaption>
+                        <img src="images/mail.png" alt="Icone email">
+                        <figcaption class="figcaption">contact@quatrespattes.org</figcaption>
                     </div>
             </div>
             <div class="contact">

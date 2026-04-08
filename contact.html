@@ -4,65 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Quatres Pattes</title>
+    <title>Quatre Pattes</title>
 
     <link rel="stylesheet" href="contact.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     
     <link rel="icon" type="image/png" href="images/logo_black.png" />
 </head>
-
-<header>
-    <nav class="nav">
-        <div class="espace">
-            <div class="icon_header"><img class="icon_header" src="images/icon_header.png" alt="icone header" ></div>
-        </div>
-        <div class="espace">
-            <div class="menu" id="menu"><a href="index.html">Accueil</a></div>
-            <div class="menu"><a href="contact.html">Contact</a></div>
-            <div class="menu"><a href="index.html#don"><img src="images/bouton.png"></a></div>
-        </div>
-    </nav>
-</header>
-
 <body>
-    <h1>Contactez-nous</h1>
+    <header>
+        <nav class="nav">
+            <div class="espace">
+                <div class="icon_header"><img class="icon_header" src="images/icon_header.png" alt="Logo Quatre Pattes"></div>
+            </div>
+            <div class="espace">
+                <div class="menu" id="menu"><a href="index.html">Accueil</a></div>
+                <div class="menu"><a href="contact.html">Contact</a></div>
+                <div class="menu"><a href="index.html#don"><img src="images/bouton.png" alt="Bouton de don"></a></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Contactez-nous</h1>
 
-    <section class="contact">
-        <form id="myForm" onsubmit="return validateForm()">
-            <label class="text" id="nom">Nom</label><br>
-            <input type="text" id="username"><br>
-            <div id="error-username" class="error"></div><br>
+        <section class="contact">
+            <form id="myForm" onsubmit="return validateForm()">
+                <label class="text" id="nom">Nom</label>
+                <input type="text" id="username">
+                <div id="error-username" class="error"></div>
 
-            <label class="text">Email</label><br>
-            <input type="text" id="email"><br>
-            <div id="error-email" class="error"></div><br>
+                <label class="text">Email</label>
+                <input type="email" id="email">
+                <div id="error-email" class="error"></div>
 
-            <label class="text">Sujet</label><br>
-            <select id="select">
-                <option value="">Choisissez une option</option>
-                <option value="questions">Question sur les dons</option>
-                <option value="partenariat">Devenir bénévole</option>
-                <option value="partenariat">Questions générales</option>
-            </select><br>
+                <label class="text">Sujet</label>
+                <select id="select">
+                    <option value="">Choisissez une option</option>
+                    <option value="questions">Question sur les dons</option>
+                    <option value="partenariat">Devenir bénévole</option>
+                    <option value="general">Questions générales</option>
+                </select>
+                <div id="error-select" class="error"></div>
 
-            <label for="message" class="text">Message</label><br>
-            <textarea id="message" name="message" placeholder="Votre message"></textarea><br>
-            <div id="error-message" class="error"></div><br>
+                <label for="message" class="text">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message"></textarea>
+                <div id="error-message" class="error"></div>
 
-            <button id="button" type="submit"><img src="images/send.png">Envoyer</button>
-        </form> 
-    </section>
+                <button id="button" type="submit"><img src="images/send.png" alt="Icone envoyer" loading="lazy">Envoyer</button>
+            </form>
+        </section>
+    </main>
     <footer>
         <div class="pied">
             <div class="contact1">
-                <p>Quattres pattes</p>
-                <p>Ensemble, protégeons les animauux et donnons-leur une vie meilleure.</p>
+                <p>Quatre Pattes</p>
+                <p>Ensemble, protégeons les animaux et donnons-leur une vie meilleure.</p>
             </div>
             <div class="contact1">
                 <p>Contact</p>
                     <div class="email">
-                        <img src="images/mail.png">
+                        <img src="images/mail.png" alt="Icone email" loading="lazy">
                         <figcaption class="figcaption">contact@quattrespattes.org</figcaption>
                     </div>
             </div>
@@ -72,3 +73,4 @@
         </div>
     </footer>
 </body>
+</html>

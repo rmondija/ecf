@@ -1,47 +1,49 @@
 function validateForm() {
-    // Récupération des champs
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
+    const select = document.getElementById("select").value;
     const message = document.getElementById("message").value;
 
-    // Récupération des éléments d'erreur
     const errorUsername = document.getElementById("error-username");
     const errorEmail = document.getElementById("error-email");
+    const errorSelect = document.getElementById("error-select");
     const errorMessage = document.getElementById("error-message");
 
-    // Réinitialiser les messages d'erreur
     errorUsername.innerHTML = "";
     errorEmail.innerHTML = "";
+    errorSelect.innerHTML = "";
     errorMessage.innerHTML = "";
 
     let isValid = true;
 
-    // Validation du nom d'utilisateur
     if (username === "") {
-        errorUsername.innerHTML = "Le Nom est obligatoire.";
+        errorUsername.innerHTML = "Le nom est obligatoire.";
         isValid = false;
     }
 
-    // Validation de l'email
     if (email === "") {
-        errorEmail.innerHTML = "L'adresse Email est obligatoire."
-        isValid = false
-    } else if (email.indexOf("@") == -1) {
-        errorEmail.innerHTML = "L'adresse Email est invalide."
-        isValid = false
+        errorEmail.innerHTML = "L'adresse email est obligatoire.";
+        isValid = false;
+    } else if (email.indexOf("@") === -1) {
+        errorEmail.innerHTML = "L'adresse email est invalide.";
+        isValid = false;
+    }
+
+    if (select === "") {
+        errorSelect.innerHTML = "Veuillez choisir un sujet.";
+        isValid = false;
     }
 
     if (message === "") {
-        errorMessage.innerHTML = "Veuillez saisir un message";
+        errorMessage.innerHTML = "Veuillez saisir un message.";
         isValid = false;
     }
-    
-    // Si tout est valide
+
     if (isValid) {
         alert("Formulaire envoyé avec succès!");
     }
 
-    return isValid; // Retourne true si tout est valide, false sinon
+    return isValid;
 }
 
 let montant = "20€";
@@ -56,7 +58,7 @@ const quizState = {
 const quizDefaults = {
     q1: "Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement",
     q2: "Faux !",
-    q3: "Vrai, ils refusent les animaux malades c’est trop couteux",
+    q3: "Vrai, ils refusent les animaux malades c'est trop couteux",
     q4: "Faux !",
     q5: "Vrai, elles reçoivent beaucoup d’argent des donateurs",
     q6: "Faux !",
@@ -64,16 +66,16 @@ const quizDefaults = {
 
 const quizResultText = {
     q1: '<img src="images/done.png"> Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement',
-    q2: '<img src="images/close.png"> Faux ! Chez Quatres Pattes, 85% des dons sont dierctement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.',
-    q3: '<img src="images/close.png"> Vrai, ils refusent les animaux malades c’est trop couteux',
+    q2: '<img src="images/close.png"> Faux ! Chez Quatre Pattes, 85% des dons sont directement utilises pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.',
+    q3: '<img src="images/close.png"> Vrai, ils refusent les animaux malades c\'est trop couteux',
     q4: '<img src="images/done.png"> Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte.',
     q5: '<img src="images/done.png"> Vrai, elles reçoivent beaucoup d’argent des donateurs.',
-    q6: '<img src="images/close.png"> Faux ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.',
+    q6: '<img src="images/close.png"> Faux ! Les besoins sont immenses et constants. Chaque don est precieux pour sauver plus d\'animaux.',
 };
 
 function resultButton() {
-    const resultButton = document.getElementById("resultButton");
-    resultButton.innerHTML = `<img src="images/heart.png" alt="heart icon"> Faire un don de ${montant} / ${periodeSelectionnee}`;
+    const buttonEl = document.getElementById("resultButton");
+    buttonEl.innerHTML = `<img src="images/heart.png" alt="heart icon"> Faire un don de ${montant} / ${periodeSelectionnee}`;
 }
 
 function modif(id) {
