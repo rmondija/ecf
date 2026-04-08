@@ -24,6 +24,16 @@ nav .espace {
     margin-right: 20px;
 }
 
+.nav-brand {
+    gap: 10px;
+}
+
+.brand-name {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .icon_header {
     margin: 10px;
 }
@@ -41,6 +51,38 @@ nav .espace {
     text-decoration: none;
     justify-content: space-between;
     margin: 0 10px;
+}
+
+.burger-menu {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 6px;
+}
+
+.menu-close {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+.don-link {
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #DB2727;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 8px 14px;
 }
 
 h1 {
@@ -147,47 +189,168 @@ h1 {
 }
 
 footer {
-    height: 100px;
+    min-height: 98px;
+    height: auto;
+    padding: 10px 0;
     background-color: #1F2937;
 }
 
 .pied {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px 40px;
     color: white;
-    margin: 20px;
-}
-
-.text-pied {
-    margin: 20px;
+    margin: 16px 20px;
 }
 
 .contact1 {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.pied .contact1 > p:first-child {
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.2;
+}
+
+.pied .contact1 > p:not(:first-child) {
+    margin: 0;
+}
+
+.pied .contact1:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.pied .contact1:nth-child(2) .email {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.pied .contact1:last-child {
+    text-align: left;
+    align-items: flex-start;
 }
 
 .email {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 0;
 }
 
 .email img {
-    max-width: 30%;
-    height: auto;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
 
 .figcaption {
     margin-left: 10px;
+    line-height: 1.2;
 }
 
 @media (max-width: 768px) {
-    nav .espace {
+    nav {
+        position: relative;
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav .espace {
         margin-right: 0;
     }
 
-    .menu {
-        margin-top: 10px;
+    .nav-brand {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 8px;
+        padding-right: 0;
+        cursor: pointer;
+    }
+
+    .nav-brand .icon_header {
+        margin: 8px 0 8px 0;
+    }
+
+    .nav-brand img.icon_header {
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0 16px;
+        background-color: #057858;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease, visibility 0.25s;
+        margin-right: 0;
+    }
+
+    .nav.nav-open .nav-links {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        pointer-events: auto;
+        max-height: 280px;
+    }
+
+    .nav.nav-open .menu-close {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        z-index: 1100;
+    }
+
+    .nav-links .menu {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .nav-links .menu a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 10px 16px;
+        text-align: left;
+    }
+
+    .nav-links .menu-don {
+        padding: 0 16px;
+    }
+
+    .nav-links .menu-don .don-link {
+        width: 100%;
+        margin-top: 6px;
+        text-align: left;
     }
 
     .contact {
@@ -199,11 +362,12 @@ footer {
 @media (max-width: 480px) {
     nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
-    .menu, .menu a {
-        margin: 5px 0;
+    .menu,
+    .menu a {
+        margin: 0;
     }
 
     .contact {
@@ -231,7 +395,25 @@ footer {
 
     .pied {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .contact1 {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .pied .contact1:nth-child(2) {
+        margin: 0;
+    }
+
+    .pied .contact1:last-child {
+        text-align: left;
+    }
+
+    .contact1 .email {
+        justify-content: flex-start;
     }
 }

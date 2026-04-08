@@ -186,4 +186,61 @@ function diaporama(element) {
     const imageTexte = element.getAttribute("data-texte");
     document.getElementById("image").src = imageSrc;
     document.getElementById("texte-principal").innerHTML = imageTexte;
+
+    document.querySelectorAll(".image-petit").forEach((thumbnail) => {
+        thumbnail.classList.remove("selected");
+    });
+
+    const selectedThumbnail = element.closest(".image-petit");
+    if (selectedThumbnail) {
+        selectedThumbnail.classList.add("selected");
+    }
 }
+
+function setupMobileMenu() {
+    const nav = document.querySelector(".nav");
+    const navBrand = document.querySelector(".nav-brand");
+    const closeMenu = document.getElementById("closeMenu");
+    const navLinks = document.getElementById("navLinks");
+
+    if (!nav || !navBrand || !closeMenu || !navLinks) {
+        return;
+    }
+
+    function openMenu() {
+        nav.classList.add("nav-open");
+    }
+
+    function hideMenu() {
+        nav.classList.remove("nav-open");
+    }
+
+    navBrand.addEventListener("click", (event) => {
+        if (window.innerWidth > 768) {
+            return;
+        }
+        openMenu();
+    });
+    closeMenu.addEventListener("click", (event) => {
+        event.stopPropagation();
+        hideMenu();
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", hideMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            hideMenu();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            hideMenu();
+        }
+    });
+}
+
+setupMobileMenu();

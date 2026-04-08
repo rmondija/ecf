@@ -14,13 +14,14 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="espace">
+            <div class="espace nav-brand">
                 <div class="icon_header"><img class="icon_header" src="images/icon_header.png" alt="Logo Quatre Pattes"></div>
+                <button class="menu-close" id="closeMenu" type="button" aria-label="Fermer le menu">×</button>
             </div>
-            <div class="espace">
+            <div class="espace nav-links" id="navLinks">
                 <div class="menu"><a href="index.html">Accueil</a></div>
                 <div class="menu"><a href="contact.html">Contact</a></div>
-                <div class="menu"><a href="#don"><img src="images/bouton.png" alt="Bouton de don"></a></div>
+                <div class="menu menu-don"><a class="don-link" href="#don">Faire un don</a></div>
             </div>
         </nav>
     </header>
@@ -86,7 +87,7 @@
             </tr>
             <tr class="image-row">
                 <td class="image-item">
-                    <div class="image-petit">
+                    <div class="image-petit selected">
                         <img class="image-container-table" id="t1" onclick="diaporama(this)" src="images/luna.jpg" alt="Luna" data-texte="<strong>Luna</strong><br>Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre. Elle coule maintenant des jours heureux dans sa nouvelle famille.<br><span class=&quot;text-date&quot;>Janvier 2024</span>" loading="lazy">
                         <p class="text-overlay-table2" onclick="diaporama(document.getElementById('t1'))">Luna</p>
                     </div>
@@ -172,17 +173,17 @@
             <div class="temoignage">
                 <img class="image-temoignage" src="images/refuge_lyon.png" alt="Refuge partenaire de Lyon" loading="lazy"><br>
                 <p class="temoignage-text">“Grâce aux dons, nous avons pu accueillir plus de 200 animaux cette année et leur offrir  une seconde chance.”</p>
-                <p class="temoignage-gras temoignage-text">Refuge Quatre Pattes - Lyon</p>
+                <p class="temoignage-gras temoignage-text">Refuge des Quatre Pattes - Lyon</p>
             </div>
             <div class="temoignage">
                 <img class="image-temoignage" src="images/refuge_marseille.png" alt="Sanctuaire partenaire de Marseille" loading="lazy"><br>
                 <p class="temoignage-text">“Le soutien de Quatre Pattes nous permet de maintenir notre mission de protection des animaux sauvages en détresse.”</p>
-                <p class="temoignage-gras temoignage-text">Sanctuaire animal - Marseille</p>
+                <p class="temoignage-gras temoignage-text">Sanctuaire Animal - Marseille</p>
             </div>
             <div class="temoignage">
                 <img class="image-temoignage" src="images/refuge_paris.png" alt="Refuge partenaire de Paris" loading="lazy"><br>
                 <p class="temoignage-text">“Chaque don compte et nous aide à offrir un avenir meilleur aux animaux abandonnés.”</p>
-                <p class="temoignage-gras temoignage-text">Refuge du soleil - Paris</p>
+                <p class="temoignage-gras temoignage-text">Refuge du Soleil - Paris</p>
             </div>
         </div>
     </main>
@@ -197,7 +198,7 @@
                 <p>Contact</p>
                     <div class="email">
                         <img src="images/mail.png" alt="Icone email">
-                        <figcaption class="figcaption">contact@quatrespattes.org</figcaption>
+                        <figcaption class="figcaption">contact@quatrepattes.org</figcaption>
                     </div>
             </div>
             <div class="contact">
